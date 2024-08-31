@@ -1,0 +1,149 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(Image/money-background-rhe8ib5o2667axpi.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+input[type="number"]::-webkit-inner-spin-button {
+    display: none;
+}
+
+.container {
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(5px);
+    padding: 20px;
+    border-radius: 20px;
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 30px rgba(0, 255, 0, 1);
+    }
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255); /* Green color for the text */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+#goal, #set-goal, #add-coin, #subtract-coin {
+    margin-top: 10px;
+}
+
+.set{
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); /* Green color for the text */
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.goal{
+    height: 30px;
+    border-radius: 15px;
+    border-color: rgb(255, 255, 255);
+    background-color: #000000;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: rgb(255, 255, 255); /* Green color for the text */
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 1);
+    animation: glow 1.5s infinite alternate;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 20px;
+    background: rgb(0, 0, 0); /* Green background for the button */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.1s ease;
+}
+
+button:hover {
+    background: #0d0; /* Darker green on hover */
+}
+
+#set-goal {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2);
+    animation: buttonGlow 1.5s infinite alternate;
+}
+#add-coin {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2);
+    animation: buttonGlow 1.5s infinite alternate;
+}
+#subtract-coin {
+    text-shadow: 0 0 10px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2);
+    animation: buttonGlow 1.5s infinite alternate;
+}
+
+@keyframes buttonGlow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 1);
+    }
+}
+
+#coins {
+    color: #ffffff;
+    font-size: 2em;
+    margin: 20px 0;
+    text-shadow: 0 0 20px rgba(0, 255, 0, 0.5), 0 0 10px rgba(0, 255, 0, 0.4), 0 0 15px rgba(0, 255, 0, 0.3), 0 0 20px rgba(0, 255, 0, 0.2);
+}
+
+.jar {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    border-radius: 20px 20px 20px 20px;
+    background: linear-gradient(to top, #000000, #000000);
+    border: 3px solid #ffffff;
+    margin: 20px auto;
+    box-shadow: 0 0 5px rgba(0, 255, 0, 1);
+    animation: glow 1.5s infinite alternate;
+}
+
+.jar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 30px;
+    background: #000000;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.coins-amount {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0, 255, 0);
+    border-radius: 20px 20px 20px 20px;
+    box-sizing: border-box;
+}
